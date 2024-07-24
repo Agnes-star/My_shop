@@ -1,7 +1,7 @@
 import pytest
 from selenium.webdriver.common.by import By
 
-
+ 
 class Test_home_page:
 
     @pytest.mark.home_page
