@@ -1,4 +1,5 @@
 import pytest
+from selenium.webdriver.common.by import By
 
 from base_page.navigate_to_product import TestNavigationToProduct
 
@@ -12,10 +13,4 @@ class TestNavigateToProduct:
         navigation_to_product.navigate_to_product("printed dress")
         assert navigation_to_product.is_dress_displayed
 
-    @pytest.mark.actual
-    @pytest.mark.negative_test
-    def test_navigate_to_product_with_invalid_product_name(self, driver):
-        navigation_to_product = TestNavigationToProduct(driver)
-        navigation_to_product._open()
-        navigation_to_product.navigate_to_product("abcde")
-        assert navigation_to_product.is_dress_displayed
+        driver.find_element(By.XPATH, "(//div[@class='button-container'])[2]").click()

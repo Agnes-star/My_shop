@@ -18,7 +18,7 @@ def driver(request):
     my_driver.quit()
 
 
-# def pytest_addoption(parser):
-#     parser.addoption(
-#         "--browser", action="store", default="chrome", help="browser to execute tests (chrome or firefox)"
-#     )
+def pytest_addoption(parser):
+    parser.addoption(
+        "--browser", action="store", default="chrome", help="browser to execute tests (chrome or firefox)"
+    )
